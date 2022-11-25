@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model RtsUser {
+  id          Int       @id @default(autoincrement())
+  username    String    @unique(map: "rts_user_username_uindex") @db.VarChar(50)
+  password    String    @db.VarChar(50)
+  createDate DateTime? @default(dbgenerated("(curdate())")) @db.Date @map("create_date")
+  createTime DateTime? @default(dbgenerated("(curtime())")) @db.DateTime(0) @map("create_time")
+
+  @@map("rts_user")
+}

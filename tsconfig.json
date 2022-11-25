@@ -12,7 +12,7 @@
 		"target": "es2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 		// 项目中会使用到console等命令，使用需要在lib中添加dom
 		"lib": [
-			"DOM"
+			"esnext"
 		], /* Specify a set of bundled library declaration files that describe the target runtime environment. */
 		// "jsx": "preserve",                                /* Specify what JSX code is generated. */
 		// "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
@@ -100,7 +100,7 @@
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.d.ts"
-	],
+, "index.ts"	],
 	"ts-node": {
 		"compilerOptions": {
 			"module": "CommonJS"
