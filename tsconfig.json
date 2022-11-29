@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
 		/* Visit https://aka.ms/tsconfig to read more about this file */
 		/* Projects */
 		// "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
@@ -99,8 +101,9 @@
 	// 项目中使用的代码都是放在src下面，所以在与compilerOptions平级的地方加上include: ["src/**/*"]
 	"include": [
 		"src/**/*.ts",
-		"src/**/*.d.ts"
-, "index.ts"	],
+		"src/**/*.d.ts",
+		"app.ts"
+	],
 	"ts-node": {
 		"compilerOptions": {
 			"module": "CommonJS"
